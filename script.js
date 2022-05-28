@@ -1,5 +1,13 @@
-let playerSelection = "RocK", computerSelection = computerPlay();
-console.log(result(playerSelection, computerSelection));
+game();
+
+//Plays 5 rounds of the game
+function game() {
+    for(let i = 0; i < 5; i++)  {
+        let playerSelection = window.prompt("Please enter your choice: ROCK / PAPER / SCISSORS:");
+        let computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
 
 //This function randomly returns Rock/Paper/Scissors
 function computerPlay() {
@@ -18,8 +26,8 @@ function computerPlay() {
     }
 }
 
-//This function displays the result of the game
-function result(playerSelection, computerSelection) {
+//This function determines the result of the game and displays it to the console
+function playRound(playerSelection, computerSelection) {
     let result = selectionToInt(playerSelection) - selectionToInt(computerSelection);
     
     if(result == 0)    {
