@@ -1,4 +1,15 @@
-game();
+//node list of buttons
+let buttons = document.querySelectorAll("button");
+
+//iterate through each item of buttons
+buttons.forEach((button) => {
+
+    //add event listener to each item of buttons
+    button.addEventListener('click', () => {
+        console.log(button.id);
+        //playRound();
+    });
+});
 
 //Plays 5 rounds of the game
 function game() {
