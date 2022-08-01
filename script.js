@@ -3,7 +3,8 @@ game();
 //Plays 5 rounds of the game
 function game() {
     let playerWins = 0, computerWins = 0;
-    for (let i = 0; i < 5; i++) {
+    
+    //for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Please enter your choice: ROCK / PAPER / SCISSORS:");
         let computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
@@ -20,7 +21,7 @@ function game() {
             playerWins++
             console.log("You Win! " + playerSelection.toUpperCase() + " beats " + computerSelection);
         }
-    }
+    //}
 
     //Display the result for 5 rounds
     if (playerWins == computerWins)
