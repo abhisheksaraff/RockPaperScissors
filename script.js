@@ -8,7 +8,9 @@ buttons.forEach((button) => {
 
     //add event listener to each item of buttons
     button.addEventListener('click', () => {
-        if (numOfGames != 5) {
+        if(button.id == "reset")    {
+            resetGame();
+        } else if (numOfGames != 5) {
             numOfGames++;
             let thisRound = playRound(button.id, computerPlay());
             resultDiv.textContent = thisRound;
@@ -77,4 +79,12 @@ function endGame()    {
     }
 
     resultDiv.textContent = result;
+}
+
+//Resets the Game and Score
+function resetGame()    {
+    numOfGames = 0;
+    playerWins = 0; 
+    computerWins = 0;
+    resultDiv.textContent = "";
 }
