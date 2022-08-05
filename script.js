@@ -28,15 +28,15 @@ function playRound(playerSelection, computerSelection) {
 
     if (turn == 0) {
         //Draw
-        return "It's a Draw, you both chose " + playerSelection;
+        return "It's a Draw, you both chose " + playerSelection.toUpperCase;
     } else if (turn == -1 || turn == 2) {
         //Computer Wins
         computerWins++;
-        return "You Lose! " + computerSelection + " beats " + playerSelection.toUpperCase();
+        return "You Lose! " + computerSelection.toUpperCase() + " beats " + playerSelection.toUpperCase();
     } else {
         //Player Wins
-        playerWins++
-        return "You Win! " + playerSelection.toUpperCase() + " beats " + computerSelection;
+        playerWins++;
+        return "You Win! " + playerSelection.toUpperCase() + " beats " + computerSelection.toUpperCase();
     }
 }
 
@@ -46,13 +46,13 @@ function computerPlay() {
 
     switch (play) {
         case 1:
-            return ("ROCK");
+            return ("rock");
             break;
         case 2:
-            return ("PAPER");
+            return ("paper");
             break;
         case 3:
-            return ("SCISSORS");
+            return ("scissors");
             break;
     }
 }
